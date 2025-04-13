@@ -1,0 +1,117 @@
+/* == Анимации и эффекты == */
+
+/**
+ * Анимация плавного появления формы
+ * @name .auth-form
+ * @description Применяет анимацию fadeIn для плавного появления элемента
+ * @example
+ * <div class="auth-form">Форма входа</div>
+ */
+ .auth-form {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/**
+ * Ключевые кадры анимации fadeIn
+ * @keyframes fadeIn
+ * @description Определяет анимацию появления с перемещением снизу вверх
+ */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/**
+ * Эффект при наведении на кнопки авторизации
+ * @name .auth-button:hover
+ * @description Добавляет подъем и тень при наведении на кнопку
+ */
+.auth-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+/* == Адаптивный дизайн == */
+
+/**
+ * Адаптивные стили для мобильных устройств
+ * @media (max-width: 600px)
+ * @description Изменяет отступы и ширину контейнера на маленьких экранах
+ */
+@media (max-width: 600px) {
+  .auth-container {
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+  }
+}
+
+/* == Компоненты интерфейса == */
+
+/**
+ * Стили Markdown-редактора
+ * @name .markdown-editor
+ * @description Основные стили редактора markdown
+ */
+.markdown-editor {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
+
+/**
+ * Панель инструментов редактора
+ * @name .markdown-editor .toolbar
+ * @description Стили для панели инструментов редактора
+ */
+.markdown-editor .toolbar {
+  background: #f5f5f5;
+  padding: 8px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  gap: 8px;
+}
+
+/**
+ * Область редактирования
+ * @name .markdown-editor .editor
+ * @description Стили для рабочей области редактора
+ */
+.markdown-editor .editor {
+  min-height: 500px;
+  padding: 20px;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  line-height: 1.6;
+  resize: vertical;
+}
+
+/* == Сетка статей == */
+
+/**
+ * Сетка для отображения карточек статей
+ * @name .article-grid
+ * @description Адаптивная сетка карточек с автоматическим заполнением
+ */
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/**
+ * Карточка статьи
+ * @name .article-card
+ * @description Стили карточки статьи с эффектом при наведении
+ */
+.article-card {
+  transition: transform 0.3s ease;
+}
+
+/**
+ * Эффект при наведении на карточку
+ * @name .article-card:hover
+ * @description Поднимает карточку при наведении
+ */
+.article-card:hover {
+  transform: translateY(-5px);
+}

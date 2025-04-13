@@ -1,0 +1,80 @@
+/**
+ * Глобальные стили приложения
+ * @styles app-styles Основные стили приложения
+ * @description Общие стили для всего приложения, включая базовые элементы и адаптацию
+ */
+
+/* Базовые стили */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+/**
+ * Стили для форм
+ * @styles form-elements Стили элементов формы
+ */
+input, textarea, button {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+
+/**
+ * Основные стили кнопок
+ * @styles buttons Базовые стили кнопок
+ */
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/**
+ * Состояние hover для кнопок
+ * @styles buttons-hover Стили при наведении
+ */
+button:hover {
+  background: #0056b3;
+}
+
+/**
+ * Анимации для форм авторизации
+ * @styles auth-animations Анимационные эффекты
+ * @example
+ * <div class="auth-form">...</div>
+ */
+.auth-form {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/**
+ * Эффекты для кнопок авторизации
+ * @styles auth-buttons Специальные стили кнопок
+ */
+.auth-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+/**
+ * Адаптивные стили для мобильных устройств
+ * @styles mobile-adaptation Адаптация под мобильные
+ * @media (max-width: 600px) Медиа-запрос для мобильных
+ */
+@media (max-width: 600px) {
+  .auth-container {
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+  }
+}
